@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Calculadora con eventos</title>
+  </head>
+  <body>
+    <h3 align="center"> Laboratoria Inc.</h3>
+    <table align="center">
+      <tr >
+        <td colspan="5">
+          <input type="text" id="operacion" placeholder="Operación" onkeyup="prueba()"/>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="5">
+          <input type="text" id="resultado" placeholder="Resultado"/>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <input type="button" value="1" onclick="numeros(this.value);"/>
+        </td>
+        <td>
+          <input type="button" value="2" onclick="numeros(this.value);"/>
+        </td>
+        <td>
+          <input type="button" value="3" onclick="numeros(this.value);"/>
+        </td>
+        <td>
+          <input type="button" value="+" onclick="numeros(this.value);operador(this.value);"/>
+        </td>
+        <td>
+          <input type="button" value="mod"/>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <input type="button" value="4" onclick="numeros(this.value);"/>
+        </td>
+        <td>
+          <input type="button" value="5" onclick="numeros(this.value);"/>
+        </td>
+        <td>
+          <input type="button" value="6" onclick="numeros(this.value);"/>
+        </td>
+        <td>
+          <input type="button" value="--" onclick="numeros(this.value);operador(this.value);"/>
+        </td>
+        <td>
+          <input type="button" value="  ^  "/>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <input type="button" value="7" onclick="numeros(this.value);"/>
+        </td>
+        <td>
+          <input type="button" value="8" onclick="numeros(this.value);"/>
+        </td>
+        <td>
+          <input type="button" value="9" onclick="numeros(this.value);"/>
+        </td>
+        <td>
+          <input type="button" value="*"/>
+        </td>
+        <td>
+          <input type="button" value="CA"/>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <input type="button" value="." onclick="numeros(this.value);"/>
+        </td>
+        <td>
+          <input type="button" value="0" onclick="numeros(this.value);"/>
+        </td>
+        <td>
+          <button type="button"  onclick="almacena(this.value);"> "=" </button> 
+        </td>
+        <td>
+          <input type="button" value=" /"/>
+        </td>
+        <td>
+          <input type="button" value=" C "/>
+        </td>
+      </tr>
+
+    </table>
+    <script src="calculadora.js"></script>
+  </body>
+</html>
