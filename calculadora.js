@@ -1,46 +1,66 @@
 var elementos =[];
 var oper = "";
-var cadena = "";
+var resultado = 0;
 
 function numeros(valor) {
   document.getElementById("operacion").value += valor;
-   cadena =document.getElementById("operacion").value;
   document.getElementById("resultado").value = valor;
-  elementos.push(document.getElementById("resultado").value);
-  // console.log("numeros");
 }
 
 function operador(operador) {
-  // document.getElementById("operacion").value += valor
-  // var cifra = document.getElementById("resultado").value
-  // var operacion = cifra + operador;
-
   document.getElementById("resultado").value = "";
-  // elementos.push(operador);
-  // console.log(elementos);
-  //console.log(eval(cifra));
-  // operaciones(operador);
   oper = operador;
-  // almacena(operador);
 }
 
-function almacena(oper) {
-  // var cadena = document.getElementById("operacion").value ;
-  console.log(cadena);
+function almacena() {
+  var cadena = document.getElementById("operacion").value ;
+  //console.log(cadena);
   console.log(oper);
-  var nums = cadena.split(oper);
-  console.log(nums);
+  elementos = cadena.split(oper);
+  console.log(elementos);
+  operaciones();
+}
+
+function operaciones() {
+  switch (oper) {
+    case "+":
+      resultado = Number(elementos[0]) + Number(elementos[1]);
+      console.log(resultado);
+      escribirResultado(resultado);
+      break;
+    case "-":
+      resultado = Number(elementos[0]) - Number(elementos[1]);
+      escribirResultado(resultado);
+      break;
+    case "*":
+      resultado = Number(elementos[0]) * Number(elementos[1]);
+      escribirResultado(resultado);
+      break;
+    case "/":
+      resultado = Number(elementos[0]) / Number(elementos[1]);
+      escribirResultado(resultado);
+      break;
+    case "mod":
+      resultado = Number(elementos[0]) % Number(elementos[1]);
+      escribirResultado(resultado);
+      break;
+    case "^":
+      resultado = Math.pow(Number(elementos[0]),Number(elementos[1]));
+      escribirResultado(resultado);
+      break;
+    case "CA":
+      document.getElementById("operacion").value = "";
+      resultado = 0;
+      break;
+
+    default:
+    alert("Ingresa una operación válida")
+
+ }
+}
+
+function escribirResultado(resultado) {
+  document.getElementById("resultado").value = resultado;
 
 }
-// function operaciones(operador) {
-//   // switch (operador) {
-//   //   case expression:
-//   //
-//   //     break;
-//   //   default:
-//
-//   // }
-//
-//
-// }
 //   var resultado = elementos[0]

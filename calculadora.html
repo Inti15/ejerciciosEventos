@@ -9,7 +9,7 @@
     <table align="center">
       <tr >
         <td colspan="5">
-          <input type="text" id="operacion" placeholder="Operación" onkeyup="prueba()"/>
+          <input type="text" id="operacion" placeholder="Ingresa tu operación" onkeyup="prueba()"/>
         </td>
       </tr>
 
@@ -33,7 +33,7 @@
           <input type="button" value="+" onclick="numeros(this.value);operador(this.value);"/>
         </td>
         <td>
-          <input type="button" value="mod"/>
+          <input type="button" value="mod" onclick="numeros(this.value);operador(this.value);"/>
         </td>
       </tr>
 
@@ -48,10 +48,10 @@
           <input type="button" value="6" onclick="numeros(this.value);"/>
         </td>
         <td>
-          <input type="button" value="--" onclick="numeros(this.value);operador(this.value);"/>
+          <input type="button" value="-" onclick="numeros(this.value);operador(this.value);"/>
         </td>
         <td>
-          <input type="button" value="  ^  "/>
+          <input type="button" value="^" onclick="numeros(this.value);operador(this.value);"/>
         </td>
       </tr>
 
@@ -66,10 +66,10 @@
           <input type="button" value="9" onclick="numeros(this.value);"/>
         </td>
         <td>
-          <input type="button" value="*"/>
+          <input type="button" value="*" onclick="numeros(this.value);operador(this.value);"/>
         </td>
         <td>
-          <input type="button" value="CA"/>
+          <input type="button" value="CA" onclick="operador(this.value);"/>
         </td>
       </tr>
 
@@ -80,14 +80,11 @@
         <td>
           <input type="button" value="0" onclick="numeros(this.value);"/>
         </td>
-        <td>
-          <button type="button"  onclick="almacena(this.value);"> "=" </button> 
+        <td colspan="2" >
+          <button type="button" align="center" onclick="almacena();"> = </button>
         </td>
         <td>
-          <input type="button" value=" /"/>
-        </td>
-        <td>
-          <input type="button" value=" C "/>
+          <input type="button" value="/" onclick="numeros(this.value);operador(this.value);"/>
         </td>
       </tr>
 
