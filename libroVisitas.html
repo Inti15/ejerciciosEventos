@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Libro de Visitas</title>
+    <style media="screen">
+      body{
+        font-family: monospace;
+        background-color: #80cbc4;
+      }
+      .texto{
+        color: white;
+      }
+
+    </style>
+  </head>
+  <body >
+    <div id="historial" style="background-color:#4db6ac;">
+      <h1> Articulos </h1>
+      <div id="historialComentarios" style=""> </div>
+    </div>
+
+    <div id="articulo" class="texto"style="background-color:#00897b;">
+      <hr/>
+      <h2> Crear artículo </h2>
+      <input type="button" value="Texto Grande" id="big" onclick="texto(this.id);"/>
+      <input type="button" value="Texto Mediano" id="med" onclick="texto(this.id);"/>
+      <input type="button" value="Texto Chico" id="small" onclick="texto(this.id);"/>
+
+      <input type="button" value="Color Texto" id="text" onclick="colorParrafo(this.id);"/>
+      <input type="button" value="Color Fondo" id="fondo" onclick="colorParrafo(this.id);"/>
+
+      <input type="button" value="Alinear Izquierda" id="izq" onclick="alinear(this.id);" />
+      <input type="button" value="Centrar" id="cen" onclick="alinear(this.id);"/>
+      <input type="button" value="Alinear Derecha" id="der" onclick="alinear(this.id);"/>
+
+      <input type="button" value="Agregar Imagen" id="img" onclick="agregar(this.id);"/>
+      <input type="button" value="Agregar Lista" id="lista" onclick="agregar(this.id);"/><br/>
+
+      <textarea placeholder="Ingresa tu comentario" rows="10" cols="105" id="areaComentario" onkeyup="escribir(this.value);"> </textarea>
+    </div>
+
+    <div id="contenidoComentario" class="texto" style="background-color:#ffffff; width: 70%;">
+      <hr/>
+      <h2 style="color:#009688"> Contenido </h2>
+      <!-- <hr/> -->
+      <!-- <div id="comentarioNuevo"> -->
+        <p id="verComentario" style="color:#000000 "> Edición comentario </p>
+      <!-- </div> -->
+      <input type="button" value="Enviar" onclick="agregarComentario();"/>
+    </div>
+
+    <script src="libroVisitas.js"></script>
+  </body>
+</html>
