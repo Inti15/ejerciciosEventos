@@ -8,6 +8,7 @@ function parar() {
 function reproducir() {
   console.log("reproduciendo");
   document.getElementById("pista").play();
+  console.log(pista.currentTime);
 }
 
 function pausa(){
