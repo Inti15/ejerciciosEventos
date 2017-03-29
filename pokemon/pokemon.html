@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pokemon</title>
+  </head>
+  <body>
+    <h1>Creando Pokemones </h1>
+    <input type="text" id="nombre" placeholder="Ingresa el nombre"/>
+    <input type="text" id="color" placeholder="Ingresa el color"/>
+    <input type="text" id="ataque" placeholder="Puntos de ataque"/>
+    <input type="button" id="crear" value="Crear Pokemon" onclick="crearPokemon(); listas();"/>
+
+    <span id="listaPokemones"> </span>
+    <span id="duelos"> </span>
+    <input type="button" value="Pelea" onclick="duelos();"/>
+
+    <script src="pokemon.js"> </script>
+  </body>
+</html>
