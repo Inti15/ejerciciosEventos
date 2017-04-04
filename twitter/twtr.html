@@ -11,16 +11,16 @@
     <label id="clicks"> </label>
     <hr/>
     <!-- Primera sección (entrada de comentarios) -->
-    <section id="entradas">
+    <form id="entradas">
       De:
-      <input type="text" id="nombre" maxlength="20"/>
+      <input type="text" id="nombre" maxlength="20" required/>
       <label id="longitudTexto"> 0</label>
       <label> / 140 </label>
-      <input type="button" id="boton" value="Enviar" onclick="escribir();"/><!--Botón que manda llamar a la función escribir() en cada click  -->
+      <input type="submit" id="boton" value="Enviar" onclick="escribir();"/><!--Botón que manda llamar a la función escribir() en cada click  -->
       <br>
-      <textarea  id="comentario" placeholder="Escribe tu comentario" cols="50" rows="10"  maxlength="140" ></textarea>
+      <textarea  id="comentario" placeholder="Escribe tu comentario" cols="50" rows="10"  maxlength="140" required></textarea>
       <!-- onkeyup="numCaracteres(this.value)" onkeydown="numCaracteres(this.value)" -->
-    </section>
+    </form>
     <!-- Segunda sección (muestra los comentarios ingresados)  -->
     <section>
       <hr/>
