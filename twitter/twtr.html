@@ -7,8 +7,21 @@
   <body style="background-color:#BA68C8; font-family:Lucida Console" >
     <h1> TWITTER </h1>
     <label> Contador de clicks: </label>
+    <label id="clicks"> </label>
     <hr/>
-    <textarea> </textarea>
+    <section id="entradas">
+      De:
+      <input type="text" id="nombre" maxlength="20"/>
+      <label id="longitudTexto"> 0</label>
+      <label> / 140 </label>
+      <input type="button" value="Enviar" onclick="escribir();"/>
+      <br>
+      <textarea  id="comentario" placeholder="Escribe tu comentario" cols="50" rows="10"  maxlength="140" ></textarea>
+      <!-- onkeyup="numCaracteres(this.value)" onkeydown="numCaracteres(this.value)" -->
+    </section>
+    <hr/>
+    <h3> <u>Historias</u> </h3>
+    <section id="historias"> </section>
     <script src= "twt.js"></script>
   </body>
 </html>
