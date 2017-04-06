@@ -1,3 +1,5 @@
+//NOTA: se puede usar el atributo diysplay = block/none para ocultar o mostrar elementos
+
 document.addEventListener("click", clicks);//Escucha el evento click dentro del documento (al ejecutarse manda llamar la función clicks)
 
 var tabla = document.getElementById("tabla");//Manda llamar al elemento del html que conduerde con el id
